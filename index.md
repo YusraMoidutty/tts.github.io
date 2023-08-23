@@ -5,7 +5,7 @@ description: Convert Your Text To Speech.
 ---
 
 <link rel="stylesheet" href="styles.css">
-# 
+
 <hr class="centered-line">
 <h5 class="centered-text">Malayalam TTS</h5> <!-- Adjust the font size -->
 
@@ -19,4 +19,4 @@ description: Convert Your Text To Speech.
   <button type="submit" class="btn btn-custom">Convert To Audio</button>
 </form>
 
-<hr class="centered-line">
+

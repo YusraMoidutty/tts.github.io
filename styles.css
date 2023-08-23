@@ -13,7 +13,7 @@
 }
 
 /* Custom styles for the page background */
-body {
+body.custom-background {
   background-color: #f2f2f2; /* Replace with your desired background color */
 }
 

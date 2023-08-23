@@ -18,5 +18,4 @@ description: Convert Your Text To Speech.
 
 <hr class="centered-line">
 
-
 <p class="centered-text">You Can add either Text / PDF </p>

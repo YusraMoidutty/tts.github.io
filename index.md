@@ -1,6 +1,6 @@
 ---
 layout: default
-title: My Just the Docs Site
+title: Malayalam TTS
 description: Convert Your Text To Speech.
 ---
 

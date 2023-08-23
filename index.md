@@ -11,3 +11,5 @@ description: Convert Your Text To Speech.
 <button class="btn btn-custom">Convert To Audio</button>
 
 <hr class="centered-line">
+
+<p class="centered-text">Your centered text goes here.</p>

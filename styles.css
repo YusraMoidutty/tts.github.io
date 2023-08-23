@@ -21,7 +21,7 @@ body.custom-background {
 .centered-line {
   width: 50%; /* Adjust the width of the line as needed */
   margin: 40px auto; /* Adjust the margin to center the line vertically */
-  border-top: 1px solid #ccc; /* Line color and style */
+  border-top: 1px solid #000; /* Set the color to black */
 }
 
 /* Custom styles for centered text */

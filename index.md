@@ -5,12 +5,9 @@ description: Convert Your Text To Speech.
 ---
 
 <link rel="stylesheet" href="styles.css">
+<h2 class="centered-text" style="font-size: 35px; font-weight: bold;">Malayalam TTS</h2> <!-- Adjust the font size -->
 
-<hr class="centered-line">
-<h5 class="centered-text">Malayalam TTS</h5> <!-- Adjust the font size -->
-
-
-<h3>Text to Speech Conversion TTS</h3>
+<h3>Text to Speech Conversion TTS</h3><br><br><br>
 
 <form action="process-text" method="post">
   <label for="text-input">Type your text:</label>
@@ -19,4 +16,7 @@ description: Convert Your Text To Speech.
   <button type="submit" class="btn btn-custom">Convert To Audio</button>
 </form>
 
+<hr class="centered-line">
 
+# Convert Your Malayalam Text to Malayalam Audio
+<p class="centered-text">You Can add either Text / PDF </p>

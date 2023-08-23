@@ -5,7 +5,8 @@ description: Convert Your Text To Speech.
 ---
 
 <link rel="stylesheet" href="styles.css">
-<body class="custom-background">
+<body style="background-color: #f2f2f2;"> <!-- Replace with your desired background color -->
+
 
 <h2 class="centered-text" style=" font-weight: bold;">Malayalam TTS</h2> <!-- Adjust the font size -->
 

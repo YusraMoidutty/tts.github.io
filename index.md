@@ -6,4 +6,4 @@ description: Convert Your Text To Speech.
 
 # Convert Your Malayalam Text to Malayalam Audio
 
-<button class="btn" onclick="window.location.href='https://github.com/YusraMoidutty/tts.github.io/new/main'">Click Me</button>
+<button class="btn">Click Me</button>

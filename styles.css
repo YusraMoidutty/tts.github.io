@@ -28,6 +28,6 @@ body {
 .centered-text {
   text-align: center;
   margin-top: 80px; /* Adjust the margin to position the text lower */
-  font-size: 35px; /* Adjust the font size as needed */
+  font-size: 45px; /* Adjust the font size as needed */
   color: #333; /* Adjust the text color */
 }

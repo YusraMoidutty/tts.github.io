@@ -3,11 +3,11 @@ layout: default
 title: Malayalam TTS
 description: Convert Your Text To Speech.
 ---
-# MALAYALAM TTS
-<link rel="stylesheet" href="styles.css">
-<!-- <h5 class="centered-text" style="font-size: 28px; font-weight: bold;">Malayalam TTS</h5> <!-- Adjust the font size --> -->
 
-<h3>Text to Speech Conversion TTS</h3><br><br><br>
+<link rel="stylesheet" href="styles.css">
+<h5 class="centered-text" style="font-size: 28px; font-weight: bold;">Malayalam TTS</h5> <!-- Adjust the font size -->
+
+<h3>Text to Speech Conversion TTS</h3><br>
 
 <form action="process-text" method="post">
   <label for="text-input">Type your text:</label>

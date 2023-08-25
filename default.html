@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malayalam TTS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2 class="centered-text" style="font-weight: bold;">Malayalam TTS</h2>
+
+<h3>Text to Speech Conversion TTS</h3>
+
+<form action="process-text" method="post">
+  <label for="text-input">Type your text:</label>
+  <textarea id="text-input" name="user-text" rows="7" cols="90"></textarea>
+  <br><br><br>
+  <button type="button" id="convertButton" class="btn btn-custom">Convert To Audio</button>
+</form>
+
+<hr class="centered-line">
+
+<p class="centered-text">You can add either Text / PDF</p>
+
+<!-- Include TensorFlow library -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0/dist/tf.min.js"></script>
+
+<!-- Include your JavaScript code here -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const convertButton = document.querySelector('#convertButton');
+    const userInput = document.getElementById('text-input');
+    const audioElement = document.createElement('audio');
+
+    document.body.appendChild(audioElement);
+
+    convertButton.addEventListener('click', async () => {
+      try {
+        const text = userInput.value;
+
+        // Load the model (replace the URL with the actual model URL)
+        const model = await tf.loadLayersModel("https://github.com/YusraMoidutty/tts.github.io/releases/download/v1.0/model_weights.hdf5");
+
+        // Process the text and generate audio (replace with your actual code)
+        const audioData = await generateAudioFromText(model, text);
+
+        // Set audio data as a playable source
+        const audioUrl = URL.createObjectURL(new Blob([audioData], { type: 'audio/wav' }));
+        audioElement.src = audioUrl;
+        audioElement.play();
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

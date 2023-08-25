@@ -12,10 +12,6 @@
   cursor: pointer;
 }
 
-/* Custom styles for the page background */
-body.custom-background {
-  background-color: #AE1D06; /* Replace with your desired background color */
-}
 
 /* Custom styles for the centered horizontal line */
 .centered-line {

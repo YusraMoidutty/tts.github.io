@@ -1,25 +1,39 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malayalam TTS</title>
+  <title>Text-to-Speech Example</title>
 </head>
 <body>
-  <h2>Malayalam TTS</h2>
-  
-  <button id="helloButton">Convert To Audio</button>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const helloButton = document.getElementById('helloButton');
+<label for="userInput">Type your text:</label>
+<textarea id="userInput" rows="4" cols="50"></textarea>
 
-      helloButton.addEventListener('click', () => {
-        console.log('Hello, World!');
-      });
+<button id="helloButton">Convert to Audio</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const helloButton = document.getElementById('helloButton');
+    const userInput = document.getElementById('userInput');
+
+    helloButton.addEventListener('click', () => {
+      const inputText = userInput.value;
+      convertToAudio(inputText);
     });
-  </script>
-  <h2>Upload Either PDF/TEXT</h2>
-  <h2>Created By JRF</h2>
+
+    function convertToAudio(text) {
+      const synth = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(text);
+
+      synth.speak(utterance);
+
+      utterance.addEventListener('end', () => {
+        console.log('Audio conversion completed.');
+      });
+    }
+  });
+</script>
+
 </body>
 </html>

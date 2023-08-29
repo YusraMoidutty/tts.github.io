@@ -1,21 +1,24 @@
 ---
 layout: default
-title: Hello World
-description: A simple page with a button that says "Hello, World!"
+title: Text Input Example
+description: An example page with a text area for user input.
 ---
 
-##Malayalam TTS
+## Text Input Example
 
-<button id="helloButton">Convert To Audio</button>
+<label for="userInput">Type your text:</label>
+<textarea id="userInput" rows="4" cols="50"></textarea>
+
+<button id="helloButton">Click Me</button>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const helloButton = document.getElementById('helloButton');
+    const userInput = document.getElementById('userInput');
 
     helloButton.addEventListener('click', () => {
-      console.log('Hello, World!');
+      const inputText = userInput.value;
+      console.log('User input:', inputText);
     });
   });
 </script>
-## Upload Either PDF/TEXT
-## Created By Yusra Moidutty

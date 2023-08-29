@@ -6,7 +6,7 @@ description: A simple page with a button that says "Hello, World!"
 
 ##Malayalam TTS
 
-<button id="helloButton">Click Me</button>
+<button id="helloButton">Convert To Audio</button>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {

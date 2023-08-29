@@ -3,39 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malayalam TTS</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Hello World</title>
 </head>
 <body>
+  <h2>Hello World</h2>
+  
+  <button id="helloButton">Click Me</button>
 
-<h2 class="centered-text" style="font-weight: bold;">Malayalam TTS</h2>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const helloButton = document.getElementById('helloButton');
 
-<h3>Text to Speech Conversion TTS</h3>
-
-<form action="process-text" method="post">
-  <label for="text-input">Type your text:</label>
-  <textarea id="text-input" name="user-text" rows="7" cols="90"></textarea>
-  <br><br><br>
-  <button type="button" id="convertButton" class="btn btn-custom">Convert To Audio</button>
-</form>
-
-<hr class="centered-line">
-
-<p class="centered-text">You can add either Text / PDF</p>
-
-<!-- Include TensorFlow library -->
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0/dist/tf.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const convertButton = document.querySelector('#convertButton');
-
-    convertButton.addEventListener('click', () => {
-      console.log('Hello, World!'); // Print "Hello, World!" when button is clicked
+      helloButton.addEventListener('click', () => {
+        console.log('Hello, World!');
+      });
     });
-  });
-</script>
-
-
+  </script>
 </body>
 </html>

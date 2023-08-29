@@ -26,7 +26,6 @@
 <!-- Include TensorFlow library -->
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0/dist/tf.min.js"></script>
 
-<!-- Include your JavaScript code here -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const convertButton = document.querySelector('#convertButton');
@@ -36,26 +35,38 @@
     document.body.appendChild(audioElement);
 
     convertButton.addEventListener('click', async () => {
-  try {
-    console.log('Button clicked'); // Add this line
-    const text = userInput.value;
+      console.log('Button clicked'); // Debug: Check if button is clicked
 
-    // Load the model (replace the URL with the actual model URL)
-    const model = await tf.loadLayersModel("https://github.com/YusraMoidutty/tts.github.io/releases/download/v1.0/model_weights.hdf5");
+      try {
+        const text = userInput.value;
 
-    // Process the text and generate audio (replace with your actual code)
-    const audioData = await generateAudioFromText(model, text);
+        // Load the model (replace the URL with the actual model URL)
+        const model = await tf.loadLayersModel("https://github.com/YusraMoidutty/tts.github.io/releases/download/v1.0/model_weights.hdf5");
+        console.log('Model loaded:', model); // Debug: Check if model is loaded
 
-    // Set audio data as a playable source
-    const audioUrl = URL.createObjectURL(new Blob([audioData], { type: 'audio/wav' }));
-    audioElement.src = audioUrl;
-    audioElement.play();
-  } catch (error) {
-    console.error('Error:', error);
-  }
-});
+        // Process the text and generate audio (replace with your actual code)
+        const audioData = await generateAudioFromText(model, text);
 
+        // Set audio data as a playable source
+        const audioUrl = URL.createObjectURL(new Blob([audioData], { type: 'audio/wav' }));
+        audioElement.src = audioUrl;
+        audioElement.play();
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
   });
+
+  async function generateAudioFromText(model, text) {
+    console.log('Generating audio from text:', text); // Debug: Check text passed to TTS logic
+
+    // Process the text and convert it to audio using the loaded model
+    // Replace this comment with your actual TTS logic
+
+    // Simulated audio data for debugging
+    const simulatedAudioData = new Uint8Array([0, 1, 2, 3, 4]);
+    return simulatedAudioData;
+  }
 </script>
 
 </body>

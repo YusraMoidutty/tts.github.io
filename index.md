@@ -22,4 +22,3 @@ description: Convert Your Text To Speech.
 <p class="centered-text">You can add either Text / PDF 
   --- Created By Yusra Moidutty IIT Pkd JRF</p>
 
-<script src="script.js"></script> <!-- Include the JavaScript file -->

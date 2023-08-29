@@ -29,45 +29,13 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const convertButton = document.querySelector('#convertButton');
-    const userInput = document.getElementById('text-input');
-    const audioElement = document.createElement('audio');
 
-    document.body.appendChild(audioElement);
-
-    convertButton.addEventListener('click', async () => {
-      console.log('Button clicked'); // Debug: Check if button is clicked
-
-      try {
-        const text = userInput.value;
-
-        // Load the model (replace the URL with the actual model URL)
-        const model = await tf.loadLayersModel("https://github.com/YusraMoidutty/tts.github.io/releases/download/v1.0/model_weights.hdf5");
-        console.log('Model loaded:', model); // Debug: Check if model is loaded
-
-        // Process the text and generate audio (replace with your actual code)
-        const audioData = await generateAudioFromText(model, text);
-
-        // Set audio data as a playable source
-        const audioUrl = URL.createObjectURL(new Blob([audioData], { type: 'audio/wav' }));
-        audioElement.src = audioUrl;
-        audioElement.play();
-      } catch (error) {
-        console.error('Error:', error);
-      }
+    convertButton.addEventListener('click', () => {
+      console.log('Hello, World!'); // Print "Hello, World!" when button is clicked
     });
   });
-
-  async function generateAudioFromText(model, text) {
-    console.log('Generating audio from text:', text); // Debug: Check text passed to TTS logic
-
-    // Process the text and convert it to audio using the loaded model
-    // Replace this comment with your actual TTS logic
-
-    // Simulated audio data for debugging
-    const simulatedAudioData = new Uint8Array([0, 1, 2, 3, 4]);
-    return simulatedAudioData;
-  }
 </script>
+
 
 </body>
 </html>

@@ -20,7 +20,7 @@ description: Convert Your Text To Speech.
 <hr class="centered-line">
 
 
-<p class="centered-text">You can add either Text / PDF --- Created By Yusra Moidutty IIT Pkd</p>
+<p class="centered-text">You can add either Text / PDF --- Created By Yusra Moidutty IIT Pkd JRF</p>
 <!-- Include your JavaScript code here -->
 
 

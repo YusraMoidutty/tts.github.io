@@ -1,24 +1,38 @@
 ---
 layout: default
-title: Text Input Example
-description: An example page with a text area for user input.
+title: Text-to-Speech Example
+description: An example page that converts user input to audio using Web Speech API.
 ---
 
-## Text Input Example
+## Text-to-Speech Example
 
 <label for="userInput">Type your text:</label>
 <textarea id="userInput" rows="4" cols="50"></textarea>
 
-<button id="helloButton">Click Me</button>
+<button id="convertButton">Convert to Audio</button>
+
+<audio id="audioElement" controls></audio>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const helloButton = document.getElementById('helloButton');
+    const convertButton = document.getElementById('convertButton');
     const userInput = document.getElementById('userInput');
+    const audioElement = document.getElementById('audioElement');
 
-    helloButton.addEventListener('click', () => {
+    convertButton.addEventListener('click', () => {
       const inputText = userInput.value;
-      console.log('User input:', inputText);
+      convertToAudio(inputText);
     });
+
+    function convertToAudio(text) {
+      const synth = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(text);
+
+      synth.speak(utterance);
+
+      utterance.addEventListener('end', () => {
+        console.log('Audio conversion completed.');
+      });
+    }
   });
 </script>

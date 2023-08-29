@@ -16,3 +16,5 @@ description: Processing User-Input Text
 {% endif %}
 
 <a href="/">Go back</a>
+
+<script src="script.js"></script> <!-- Include the JavaScript file -->

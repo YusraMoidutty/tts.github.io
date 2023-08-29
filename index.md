@@ -1,24 +1,19 @@
 ---
 layout: default
-title: Malayalam TTS
-description: Convert Your Text To Speech.
+title: Hello World
+description: A simple page with a button that says "Hello, World!"
 ---
 
-<link rel="stylesheet" href="styles.css">
+## Hello World
 
-<h2 class="centered-text" style="font-weight: bold;">Malayalam TTS</h2>
+<button id="helloButton">Click Me</button>
 
-<h3>Text to Speech Conversion TTS</h3>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const helloButton = document.getElementById('helloButton');
 
-<form action="process-text" method="post">
-  <label for="text-input">Type your text:</label>
-  <textarea id="text-input" name="user-text" rows="7" cols="90"></textarea>
-  <br><br><br>
-  <button type="button" id="convertButton" class="btn btn-custom">Convert To Audio</button>
-</form>
-
-<hr class="centered-line">
-
-<p class="centered-text">You can add either Text / PDF 
-  --- Created By Yusra Moidutty IIT Pkd JRF</p>
-
+    helloButton.addEventListener('click', () => {
+      console.log('Hello, World!');
+    });
+  });
+</script>
